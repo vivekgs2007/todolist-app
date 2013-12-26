@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />  
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <hr>
+    <h2><%= todolistheader %></h2>
+    	<table class="listtable">
+    		<thead>
+    			<th>sl no</th>
+    			<th>Name</th>
+    			<th>Description</th>
+    			<th>Delete</th>
+    		</thead>
+    		<tbody>
+    			<% todolist.forEach( function( todo ){ %>
+    				<% i=1 %>
+				  <tr>
+				  	<td><%= i %></td>
+				  	<td><a href="/todo/<%= todo._id %>" class="todoname"><%= todo.name %></a></td>
+				  	<td><p class="tododescription"><%= todo.description %></p></td>
+				  	<td><a href="/delete/<%= todo._id %>" class="todoname">Delete</a></td>
+				  </tr>
+				  <% i = i+1 %>
+				<% }); %>	
+    		</tbody>
+    	</table>
+    	
+    
+    <hr>
+    <form method="post" action="/todo">
+    	<div class="formfield">
+    		<label>Todo Name:</label>
+    		<input type="text" name="name" value="">
+    	</div>
+    	<div class="formfield">
+    		<label>Todo Description:</label>
+    		<textarea name="description" row="3" col"4"></textarea>
+    	</div>
+    	<div class="submit">    		
+    		<input type="submit" name="submit" value="Submit">
+    	</div>
+    </form>	
+  </body>
+</html>

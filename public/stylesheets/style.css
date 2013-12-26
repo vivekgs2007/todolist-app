@@ -1,0 +1,49 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.formfield{
+	padding: 5px;
+}
+.formfield label{
+	padding: 2px 3px 2px 0px;
+	font-weight: bold;
+	color: brown;
+}
+.formfield input{
+		
+}
+.formfield textarea{
+		
+}
+.formfield textarea{
+		
+}
+.submit input{
+	padding: 2px 3px 2px 0px;
+	font-weight: bold;
+}
+.todoname{
+	font-weight: bold;
+	color: green;
+	font-size: 16px;
+}
+.tododescription{
+	padding-left: 5px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+table.listtable {
+	width: 100%;
+	min-width: 200px;
+}
+table.listtable thead th{
+	border: 1px solid #efefef;
+}
+table.listtable tbody tr td{
+	border: 1px solid #efefef;
+	vertical-align: middle;
+}

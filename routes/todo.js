@@ -1,5 +1,5 @@
 var todo = require('../db').collections.todo;
-
+var ObjectId = require('../db').ObjectId;
 exports.create = function(req,res){
 	var params = req.body;
 	todo.insert(params,function(err){
@@ -9,7 +9,7 @@ exports.create = function(req,res){
 };
 
 exports.destroy = function(req,res){
-	todo.remove({_id: req.params.id}, function ( err, todo ){
+	todo.remove({_id: new ObjectId(req.params.id)}, function ( err, todo ){
 		if(err) return res.status(400).send({status: 'Falied to delete the mongodb todo list collection'});
 	      res.redirect( '/' );
 	  });
